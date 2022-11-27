@@ -1,0 +1,61 @@
+---
+title: "Assessment2"
+output: bookdown::html_document2
+date: "2022-11-17"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.align ="center")
+```
+
+
+```{r}
+install.packages("bookdown")
+library(bookdown)
+install.packages("tidyverse")
+library(tidyverse)
+install.packages("ggplot2")
+library(ggplot2)
+
+```
+
+## Learning to reference figures
+
+```{r,FigreAssessmment2, fig.cap="This is random noise"}
+x = rnorm(100) 
+y = seq(1:100) 
+
+dat = data.frame(x, y) 
+ggplot(dat, aes(x = x, y = y)) + 
+    geom_line()
+
+```
+
+We are practicing to reference a figure \@ref(fig:FigreAssessmment2).
+
+## Learning to reference tables
+
+```{r TableAssessment2}
+table_dat <- head(dat,5)
+knitr::kable(table_dat, 
+             caption = "This is random noise table",
+             digits = 1)
+```
+
+We are practicing to reference a table \@ref(tab:TableAssessment2).
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
