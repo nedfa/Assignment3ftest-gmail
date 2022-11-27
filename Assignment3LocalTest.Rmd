@@ -4,6 +4,10 @@ output: bookdown::html_document2
 date: "2022-11-17"
 ---
 
+```{r out.width = '60%', echo = FALSE, fig.align = "center"} knitr::include_graphics("figs/yourfigure.png")}
+
+```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(fig.align ="center")
